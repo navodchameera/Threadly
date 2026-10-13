@@ -8,7 +8,7 @@
         <form name = "formLogin" action = "" method = "post">
             <table id = "layout">
                 <tr>
-                    <td class = "login-details">
+                    <td class = "login-info">
                         <table>
                             <tr>
                                 <td class = "name">Threadly</td>
@@ -17,33 +17,34 @@
                                 <td class = "motto">Ask. Answer. <br>Solve together.</td>
                             </tr>
                             <tr>
-                                <td>A friendly community forum where every question finds a helpful answer.</td>
+                                <td id = "description">A friendly community forum where every question finds a helpful answer.</td>
                             </tr>
                         </table>
                     </td>
                 
-                    <td>
-                        <table align = "center" border = "1">
+                    <td class = "login-details-background">
+                        <table class = "login-details">
                             <tr>
-                                <td align = "center">Login</td>
+                                <td class = "login-title">Login</td>
                             </tr>
                             <tr>
-                                <td>Username</td>
+                                <td class = "input-names">Username</td>
                             </tr>
                             <tr>
-                                <td><input type = "text" placeholder = "Username"></td>
+                                <td class = "input-cells"><input type = "text" placeholder = "username" name = "username" class = "textbox"></td>
                             </tr>
                             <tr>
-                                <td>Password</td>
+                                <td class = "input-names">Password</td>
                             </tr>
                             <tr>
-                                <td><input type = "text" placeholder = "Password"></td>
+                                <td class = "input-cells"><input type = "text" placeholder = "password" name = "password" class = "textbox"></td>
                             </tr>
                             <tr>
-                                <td align = "center"><input type = "submit" value = "Login"></td>
+                                <td><input type = "submit" value = "Login" class = "login-button"></td>
                             </tr>
+                           
                             <tr>
-                                <td>New to Threadly? <a href = "signup" >Sign Up</a></td>
+                                <td class = "switch-login">New to Threadly? <a href = "signup.html" class = "switch-link">Sign Up</a></td>
                             </tr>
                         </table>
                     </td>

@@ -1,9 +1,96 @@
-.login-details
+#layout
+{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.login-info
 {
     background : linear-gradient(135deg, #6d5efc, #c056f5);
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;
+}
+.login-details-background
+{
+    background-color: #0f0e1a;
+    width: 50%;
+}
+.login-details
+{
+    height: 410px;
+    width: 410px;
+    border-radius: 20px;
+    border : 1.5px solid;
+    border-color: #262541;
+    color : white;
+    margin: auto;
+    background-color: #191830;
+    padding: 30px;
+}
+.login-title
+{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.input-names
+{
+    height: 0px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #9b99b8 ;
+    padding-left: 5px;
+}
+.input-cells
+{
+    height: 0px;
+    padding-bottom: 20px;
+    padding-top: 8px;
+}
+.textbox
+{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #262541;
+    padding: 10px;
+    background-color: #0f0e1a;
+    color: white;
+}
+.textbox:focus /*when textbox is clicked*/
+{
+    outline: 2px solid #6d5efc;
+}
+.login-button /*will also used as sign-up button*/
+{
+    background : linear-gradient(135deg, #c056f5, #6d5efc );
+    width: 400px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0px solid;
+    
+    margin-bottom: 40px;
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.login-button:hover
+{
+    background : linear-gradient(135deg, #6d5efc , #c056f5);
+
+}
+.switch-login
+{
+    font-size: 12px;
+}
+.switch-link
+{
+    color: #6d5efc;
+    text-shadow: bold;
 }
 .name
 {
@@ -21,22 +108,24 @@
     font-weight: bold;
     font-size: 72px;
     padding-bottom: 20px;
+    padding-left: 30px;
     
+}
+#description
+{
+    font-size: 16px;
+    color: white;
+    padding-left: 30px;
 }
 body
 {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Plus Jakarta Sans;
-}
-#layout
-{
+    margin: auto;
     padding: 0;
     height: 100%;
     width: 100%;
-
+    font-family: Plus Jakarta Sans;
 }
+
 table 
 {
     border-spacing: 0;
