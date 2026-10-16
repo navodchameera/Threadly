@@ -3,9 +3,11 @@
         <title>Threadly Sign Up</title>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel = "stylesheet" type = "text/css" href = "css/styles.css">
+        <script type = "text/javascript" src = "js/registererrors.js" defer></script>
+        <script type = "text/javascript" src = "js/validatesignup.js" defer></script>
     </head>
     <body>
-        <form name = "formLogin" action = "register.php" method = "post">
+        <form name = "formSignUp" action = "register.php" method = "post">
             <table id = "layout">
                 <tr>
                     <td class = "login-info">
@@ -34,10 +36,16 @@
                                 <td class = "input-cells"><input type = "text" placeholder = "username" name = "username" class = "textbox"></td>
                             </tr>
                             <tr>
+                                <td><p id = "errorUsername" class = "error"></p></td>
+                            </tr>
+                            <tr>
                                 <td class = "input-names">Email</td>
                             </tr>
                             <tr>
                                 <td class = "input-cells"><input type = "text" placeholder = "email" name = "email" class = "textbox"></td>
+                            </tr>
+                             <tr>
+                                <td><p id = "errorEmail" class = "error"></p></td>
                             </tr>
                             <tr>
                                 <td class = "input-names">Password</td>
@@ -46,15 +54,22 @@
                                 <td class = "input-cells"><input type = "text" placeholder = "password" name = "password" class = "textbox"></td>
                             </tr>
                              <tr>
+                                <td><p id = "errorPassword" class = "error"></p></td>
+                            </tr>
+                            <tr>
                                 <td class = "input-names">Confirm Password</td>
                             </tr>
                             <tr>
-                                <td class = "input-cells"><input type = "text" placeholder = "confirm password" name = confirm_password" class = "textbox"></td>
+                                <td class = "input-cells"><input type = "text" placeholder = "confirm password" name = "confirmPassword" class = "textbox"></td>
+                            </tr>
+                             <tr>
+                                <td><p id = "errorConfirmPassword" class = "error"></p></td>
                             </tr>
                             <tr>
                                 <td><input type = "submit" value = "Sign Up" class = "login-button"></td>
                             </tr>
-                           
+                            
+        
                             <tr>
                                 <td class = "switch-login">Already use Threadly?&nbsp;&nbsp;<a href = "index.html" class = "switch-link">Login</a></td>
                             </tr>

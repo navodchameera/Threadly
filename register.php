@@ -21,12 +21,14 @@ try
         $insert = $con->prepare("INSERT INTO user(email,username,password) VALUES (?,?,?)");
         $insert->bind_param("sss",$email,$username,$password);
         $insert->execute();
-        echo "saved Successfully";
+        echo "saved";
+        //load the home page
+        
 
     }
     else
     {
-        echo "username already exists";
+        echo "username_taken";
     }
 
     

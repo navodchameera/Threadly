@@ -3,27 +3,40 @@
 include "connection.php";
 
 $username = $_POST["username"];
-$password = password_hash($_POST["password"],PASSWORD_BCRYPT);
+$password = $_POST["password"];
 
 try
 {
-    $select =  $con->prepare("SELECT * FROM user WHERE username = ? AND password = ?");
-    $select->bind_param("ss",$username,$password);
+    $select =  $con->prepare("SELECT password FROM user WHERE username = ?");
+    $select->bind_param("s",$username);
     $select->execute();
 
     $result = $select->get_result();
 
     if($result->num_rows == 1)
     {
-        echo "hoi";
+        //getting db password
+        $row = $result->fetch_assoc();
+        //storing db password
+        $dbPassword = $row["password"];
+        //if user enterd password and dbpassword equals
+        if(password_verify($password, $dbPassword))
+        {
+            echo "loged in Successfully";
+        }
+        else
+        {
+            echo "invild username or password";
+        }
     }
     else
     {
-        
+        echo "invild username or password";
     }
 
     mysqli_close($con);
 }
+
 catch(Exception $ex)
 {
     die("Something went wrong");
