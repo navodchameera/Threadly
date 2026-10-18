@@ -7,7 +7,6 @@ function validateLogin()
     var usernameError = document.getElementById("errorUsername");
     var passwordError = document.getElementById("errorPassword");
 
-    var isValid = true;
 
     // Clear previous errors
     usernameError.innerText = "";
@@ -17,15 +16,17 @@ function validateLogin()
     if (username.trim() === "")
     {
         usernameError.innerText = "Username is required!";
-        isValid = false;
+        return false;
     }
-
     // Password validation
-    if (password === "")
+    else if (password === "")
     {
         passwordError.innerText = "Password is required!";
-        isValid = false;
+        return false;
+    }
+    else
+    {
+        return true;
     }
 
-    return isValid;
 }

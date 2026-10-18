@@ -50,7 +50,7 @@
     padding-bottom: 5px;
     padding-top: 8px;
 }
-.textbox
+.textbox,textarea
 {
     width: 400px;
     height: 40px;
@@ -65,7 +65,7 @@
 {
     outline: 2px solid #6d5efc;
 }
-.login-button /*will also used as sign-up button*/
+.login-button /*will also used as sign-up,post button*/
 {
     background : linear-gradient(135deg, #c056f5, #6d5efc );
     width: 400px;
@@ -136,4 +136,165 @@ table
     font-size: 12px;
     margin-left: 8px ;
     color: red;
+}
+.threadly-title
+{
+    background: linear-gradient(135deg, #6d5efc, #c056f5);
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    font-size: 24px;
+    padding-left: 15px;
+    width: 20px;
+}
+.home-body
+{
+    background-color: #0f0e1a;
+    font-family: Plus Jakarta Sans;
+    margin: auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    overflow: hidden; 
+}
+#username
+{
+    color: white;
+    font-weight: bold;
+    padding-right: 20px;
+    text-align: right;  
+}
+#logout-button
+{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: red;
+    margin-top: 10px;
+    color: red;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 15px;
+}
+#logout-button:hover
+{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: red;
+    color: #0f0e1a;
+    background-color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 15px;
+}
+#logout-button-background
+{
+    width: 100px;
+    padding-right: 10px;
+}
+#top-nav-bar
+{
+    height: 60px; 
+    background-color: #191830 ;
+    border-spacing: 0;
+}
+#left-nav-bar
+{
+    height: calc(100vh - 80px); /*screen height - top bar (60px) - top and bottom margin (20px)*/
+    /*vh gets full screen size*/
+    width: 250px;
+    background-color: #191830 ;
+    color: white;
+    border-spacing: 0;
+    margin: 10px;
+    border-radius: 20px;
+    border : 1.5px solid #262541;
+}
+#input-area
+{
+    background-color: #191830 ;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border-radius: 20px;
+    border : 1.5px solid #262541;
+}
+#content-area /*scrolling area*/
+{
+    height: calc(100vh - 60px); 
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 20px; 
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #262541 transparent;
+}
+#title-textbox
+{
+    width: 400px;
+    box-sizing: border-box;
+}
+#content-textbox
+{
+    width: 100%;
+    height: 100px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    font-family: Plus Jakarta Sans;
+}
+.post-button /*will also used as sign-up,post button*/
+{
+    background : linear-gradient(135deg, #c056f5, #6d5efc );
+    width: 80px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0px solid;
+    
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.post-button:hover
+{
+    background : linear-gradient(135deg, #6d5efc , #c056f5);
+}
+.thread-card
+{
+    background-color: #191830 ;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border : 1.5px solid #262541;
+    color: white;
+    
+}
+.thread-card:hover
+{
+    outline: transparent;
+    border-color: #6d5efc;
+}
+.thread-content
+{
+    color: #9b99b8;
+    padding-bottom: 15px;
+    overflow-wrap: anywhere; /*breaks very long words instead of overflowing*/
+}
+.thread-user
+{
+    font-size: 13px;
+    font-weight: bold;
+    color: #6d5efc;
 }

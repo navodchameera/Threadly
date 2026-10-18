@@ -3,11 +3,12 @@
 include "connection.php";
 
 $username = $_POST["username"];
+
 $password = $_POST["password"];
 
 try
 {
-    $select =  $con->prepare("SELECT password FROM user WHERE username = ?");
+    $select =  $con->prepare("SELECT * FROM user WHERE username = ?");
     $select->bind_param("s",$username);
     $select->execute();
 
@@ -17,12 +18,27 @@ try
     {
         //getting db password
         $row = $result->fetch_assoc();
+        //getting user details
+        $userId = $row["userId"];
         //storing db password
         $dbPassword = $row["password"];
+        $role = $row["role"];
         //if user enterd password and dbpassword equals
         if(password_verify($password, $dbPassword))
         {
             echo "loged in Successfully";
+            session_start();
+            $_SESSION["CurrentUserId"] = $userId;
+            $_SESSION["CurrrentUsername"] = $username;
+            if($role == "admin")
+            {
+                header("Location: home.php");
+            }
+            else
+            {
+                header("Location: home.php");
+            }
+
         }
         else
         {
@@ -39,7 +55,7 @@ try
 
 catch(Exception $ex)
 {
-    die("Something went wrong");
+    die($ex->getMessage());
 }
 
 ?>

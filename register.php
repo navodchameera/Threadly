@@ -5,6 +5,7 @@ include "connection.php";
 $username = $_POST["username"];
 $email = $_POST["email"];
 $password = password_hash($_POST["password"],PASSWORD_BCRYPT);
+$role = "user";
 
 try
 {
@@ -18,13 +19,11 @@ try
     if($result->num_rows == 0)
     {
         //if there is no user name for that we can register that username
-        $insert = $con->prepare("INSERT INTO user(email,username,password) VALUES (?,?,?)");
-        $insert->bind_param("sss",$email,$username,$password);
+        $insert = $con->prepare("INSERT INTO user(email,username,password,role) VALUES (?,?,?,?)");
+        $insert->bind_param("ssss",$email,$username,$password,$role);
         $insert->execute();
         echo "saved";
         //load the home page
-        
-
     }
     else
     {
