@@ -2,49 +2,67 @@
     <head>
         <title>Threadly Login</title>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" type = "text/css" href = "css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/loginerrors.js" defer></script>
+        <script type="text/javascript" src="js/validatelogin.js"></script>
     </head>
+
     <body>
-        <form name = "formLogin" action = "checkcredentials.php" method = "post">
-            <table id = "layout">
+        <form name="formLogin" action="checkcredentials.php" method="post">
+            <table id="layout">
                 <tr>
-                    <td class = "login-info">
+                    <td class="login-info">
                         <table>
                             <tr>
-                                <td class = "name">Threadly</td>
+                                <td class="name">Threadly</td>
                             </tr>
                             <tr>
-                                <td class = "motto">Ask. Answer. <br>Solve together.</td>
+                                <td class="motto">Ask. Answer.<br>Solve together.</td>
                             </tr>
                             <tr>
-                                <td id = "description">A friendly community forum where every question finds a helpful answer.</td>
+                                <td id="description">A friendly community forum where every question finds a helpful answer.</td>
                             </tr>
                         </table>
                     </td>
-                
-                    <td class = "login-details-background">
-                        <table class = "login-details">
+
+                    <td class="login-details-background">
+                        <table class="login-details">
                             <tr>
-                                <td class = "login-title">Login</td>
+                                <td class="login-title">Login</td>
                             </tr>
                             <tr>
-                                <td class = "input-names">Username</td>
+                                <td class="input-names">Username</td>
                             </tr>
                             <tr>
-                                <td class = "input-cells"><input type = "text" placeholder = "username" name = "username" class = "textbox"></td>
+                                <td class="input-cells">
+                                    <input type="text" name="username" placeholder="username" class="textbox">
+                                </td>
                             </tr>
                             <tr>
-                                <td class = "input-names">Password</td>
+                                <td><p id="errorUsername" class="error"></p></td>
                             </tr>
                             <tr>
-                                <td class = "input-cells"><input type = "text" placeholder = "password" name = "password" class = "textbox"></td>
+                                <td class="input-names">Password</td>
                             </tr>
                             <tr>
-                                <td><input type = "submit" value = "Login" class = "login-button"></td>
+                                <td class="input-cells">
+                                    <div class="password-container">
+                                        <input type="password" name="password" id="password" placeholder="password" class="textbox">
+                                        <input type="button" id="passwordToggleButton" class="password-toggle" onclick="togglePassword()" value="Show">
+                                    </div>
+                                </td>
                             </tr>
-                           
                             <tr>
-                                <td class = "switch-login">New to Threadly?&nbsp;&nbsp;<a href = "signup.html" class = "switch-link">Sign Up</a></td>
+                                <td><p id="errorPassword" class="error"></p></td>
+                            </tr>
+                            <tr>
+                                <td><p id="loginError" class="error"></p></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Login" class="login-button"></td>
+                            </tr>
+                            <tr>
+                                <td class="switch-login">New to Threadly?&nbsp;&nbsp;<a href="signup.html" class="switch-link">Sign Up</a></td>
                             </tr>
                         </table>
                     </td>
@@ -52,5 +70,4 @@
             </table>
         </form>
     </body>
-
 </html>

@@ -199,6 +199,39 @@ table
     width: 100px;
     padding-right: 10px;
 }
+.password-container
+{
+    position: relative;
+}
+
+.password-container .textbox
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 65px;
+}
+
+.password-toggle
+{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 5px;
+    color: #c7a0ff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.password-toggle:hover
+{
+    color: white;
+}
+
 #top-nav-bar
 {
     height: 60px; 
@@ -219,7 +252,7 @@ table
 }
 #input-area
 {
-    background-color: #191830 ;
+    background-color: #302338 ;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -241,8 +274,10 @@ table
 }
 #title-textbox
 {
-    width: 400px;
+    width: 500px;
     box-sizing: border-box;
+    font-family: Plus Jakarta Sans;
+    margin-bottom: 10px;
 }
 #content-textbox
 {
@@ -255,8 +290,8 @@ table
 .post-button /*will also used as sign-up,post button*/
 {
     background : linear-gradient(135deg, #c056f5, #6d5efc );
-    width: 80px;
-    height: 45px;
+    width: 70px;
+    height: 43.26px;
     border-radius: 10px;
     border: 0px solid;
     
@@ -297,4 +332,147 @@ table
     font-size: 13px;
     font-weight: bold;
     color: #6d5efc;
+    padding-left: 5px;
+    padding-top: 15px;
+    text-align: left;
+}
+.user-image-thread-background
+{
+    width : 30px;
+}
+.nav-button
+{
+    text-decoration: none;  /*removes underline*/
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #9b99b8;
+}
+.nav-button-active
+{
+    text-decoration: none; /*removes underline*/
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #6d5efc;
+    color: white;
+}
+.nav-button:hover
+{   
+    background-color: #262541;
+    color: white;
+}
+
+
+.search-bar:focus-within {
+    border-color: #6d5efc;
+    
+}
+
+.search-bar {
+    background-color: #262541;
+    border: 1px solid #464064;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 100%;;
+    color: white;
+    font-size: 14px;
+    padding-top: 10px;
+    
+}
+
+
+.search-button {
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #c056f5, #6d5efc);
+    color: white;
+    font-weight: 600;
+    text-align: right;
+    margin:10px;
+}
+
+.search-button:hover {
+    background: linear-gradient(135deg, #6d5efc, #c056f5);
+}
+
+.search-button:active {
+    transform: scale(0.97);
+}
+
+.error-page
+{
+    background-color: #0f0e1a;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+.error-box
+{
+    width: 450px;
+    margin: 150px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #191830;
+    border: 1.5px solid #262541;
+    border-radius: 20px;
+}
+
+.error-title
+{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.error-description
+{
+    color: #9b99b8;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+.error-button
+{
+    display: inline-block;
+    width: 120px;
+    margin: 10px 3px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    line-height: 43px;
+    cursor: pointer;
+}
+
+.error-home
+{
+    background: linear-gradient(135deg, #c056f5, #6d5efc);
+}
+
+.error-home:hover
+{
+    background: linear-gradient(135deg, #6d5efc, #c056f5);
+}
+
+.error-login
+{
+    background-color: #262541;
+    border-color: #454363;
+    color: #c7c5dc;
+}
+
+.error-login:hover
+{
+    background-color: #343250;
 }
