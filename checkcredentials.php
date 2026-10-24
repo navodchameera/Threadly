@@ -22,6 +22,7 @@ try
         $userId = $row["userId"];
         $dbPassword = $row["password"];
         $status = $row["status"];
+        $role = $row["role"];
 
         if(password_verify($password, $dbPassword))
         {
@@ -30,6 +31,7 @@ try
 
                 $_SESSION["currentUserId"] = $userId;
                 $_SESSION["currrentUsername"] = $row["username"];
+                $_SESSION["currentRole"] = $role;
 
                 echo "success";
             }
@@ -53,7 +55,8 @@ try
 }
 catch(Exception $ex)
 {
-    echo "error";
+    header("Location: error.html");
+    exit; // Stop executing the remaining PHP
 }
 
 ?>

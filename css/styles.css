@@ -4,30 +4,33 @@
     height: 100%;
     width: 100%;
 }
+
 .login-info
 {
-    background : linear-gradient(135deg, #6d5efc, #c056f5);
+    background: linear-gradient(135deg, #6d5efc, #c056f5);
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .login-details-background
 {
     background-color: #0f0e1a;
     width: 50%;
 }
+
 .login-details
 {
     height: 410px;
     width: 410px;
     border-radius: 20px;
-    border : 1.5px solid;
-    border-color: #262541;
-    color : white;
+    border: 1.5px solid #262541;
+    color: white;
     margin: auto;
     background-color: #191830;
     padding: 30px;
 }
+
 .login-title
 {
     text-align: center;
@@ -35,108 +38,116 @@
     font-weight: bold;
     padding-bottom: 30px;
 }
+
 .input-names
 {
-    height: 0px;
+    height: 0;
     font-size: 13px;
     font-weight: bold;
-    color: #9b99b8 ;
+    color: #9b99b8;
     padding-left: 5px;
     padding-top: 20px;
 }
+
 .input-cells
 {
-    height: 0px;
+    height: 0;
     padding-bottom: 5px;
     padding-top: 8px;
 }
-.textbox,textarea
+
+.textbox,
+textarea
 {
     width: 400px;
     height: 40px;
     border-radius: 10px;
-    border: 1px solid;
-    border-color: #262541;
+    border: 1px solid #262541;
     padding: 10px;
     background-color: #0f0e1a;
     color: white;
 }
-.textbox:focus /*when textbox is clicked*/
+
+.textbox:focus /* When the textbox is clicked */
 {
     outline: 2px solid #6d5efc;
 }
-.login-button /*will also used as sign-up,post button*/
+
+.login-button
 {
-    background : linear-gradient(135deg, #c056f5, #6d5efc );
+    background: linear-gradient(135deg, #c056f5, #6d5efc);
     width: 400px;
     height: 45px;
     border-radius: 10px;
-    border: 0px solid;
-    
+    border: none;
     margin-bottom: 40px;
     margin-top: 20px;
     color: white;
     font-size: 18px;
     font-weight: bold;
 }
+
 .login-button:hover
 {
-    background : linear-gradient(135deg, #6d5efc , #c056f5);
-
+    background: linear-gradient(135deg, #6d5efc, #c056f5);
 }
+
 .switch-login
 {
     font-size: 12px;
 }
+
 .switch-link
 {
     color: #6d5efc;
-    text-shadow: bold;
 }
+
 .name
 {
     padding-left: 30px;
     padding-bottom: 100px;
-    
     font-size: 30px;
     font-weight: bold;
     color: white;
 }
+
 .motto
 {
-    
     color: white;
     font-weight: bold;
     font-size: 72px;
     padding-bottom: 20px;
     padding-left: 30px;
-    
 }
+
 #description
 {
     font-size: 16px;
     color: white;
     padding-left: 30px;
 }
+
 body
 {
     margin: auto;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: Plus Jakarta Sans;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
 }
 
-table 
+table
 {
     border-spacing: 0;
 }
+
 .error
 {
     font-size: 12px;
-    margin-left: 8px ;
+    margin-left: 8px;
     color: red;
 }
+
 .threadly-title
 {
     background: linear-gradient(135deg, #6d5efc, #c056f5);
@@ -147,32 +158,33 @@ table
     padding-left: 15px;
     width: 20px;
 }
+
 .home-body
 {
     background-color: #0f0e1a;
-    font-family: Plus Jakarta Sans;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
     margin: auto;
     padding: 0;
     height: 100%;
     width: 100%;
     color: white;
-    overflow: hidden; 
+    overflow: hidden;
 }
+
 #username
 {
     color: white;
     font-weight: bold;
     padding-right: 20px;
-    text-align: right;  
+    text-align: right;
 }
+
 #logout-button
 {
     width: 80px;
     height: 30px;
     border-radius: 10px;
-    border: 1px solid;
-    border-color: red;
-    margin-top: 10px;
+    border: 1px solid red;
     color: red;
     background-color: transparent;
     font-size: 14px;
@@ -180,25 +192,19 @@ table
     margin: auto;
     margin-top: 15px;
 }
+
 #logout-button:hover
 {
-    width: 80px;
-    height: 30px;
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: red;
     color: #0f0e1a;
     background-color: red;
-    font-size: 14px;
-    font-weight: bold;
-    margin: auto;
-    margin-top: 15px;
 }
+
 #logout-button-background
 {
     width: 100px;
     padding-right: 10px;
 }
+
 .password-container
 {
     position: relative;
@@ -234,25 +240,27 @@ table
 
 #top-nav-bar
 {
-    height: 60px; 
-    background-color: #191830 ;
+    height: 60px;
+    background-color: #191830;
     border-spacing: 0;
 }
+
 #left-nav-bar
 {
-    height: calc(100vh - 80px); /*screen height - top bar (60px) - top and bottom margin (20px)*/
-    /*vh gets full screen size*/
+    /* Screen height minus the top bar and vertical margins */
+    height: calc(100vh - 80px);
     width: 250px;
-    background-color: #191830 ;
+    background-color: #191830;
     color: white;
     border-spacing: 0;
     margin: 10px;
     border-radius: 20px;
-    border : 1.5px solid #262541;
+    border: 1.5px solid #262541;
 }
+
 #input-area
 {
-    background-color: #302338 ;
+    background-color: #302338;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -260,91 +268,113 @@ table
     height: 100px;
     padding: 15px;
     border-radius: 20px;
-    border : 1.5px solid #262541;
+    border: 1.5px solid #262541;
 }
-#content-area /*scrolling area*/
+
+#content-area /* Scrolling area */
 {
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 60px);
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 20px; 
+    padding-right: 20px;
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #262541 transparent;
 }
+
 #title-textbox
 {
     width: 500px;
     box-sizing: border-box;
-    font-family: Plus Jakarta Sans;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
     margin-bottom: 10px;
 }
+
 #content-textbox
 {
     width: 100%;
     height: 100px;
     padding-right: 15px;
     box-sizing: border-box;
-    font-family: Plus Jakarta Sans;
-    
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
 }
-.post-button /*will also used as sign-up,post button*/
+
+.post-button
 {
-    background : linear-gradient(135deg, #c056f5, #6d5efc );
+    background: linear-gradient(135deg, #c056f5, #6d5efc);
     width: 70px;
     height: 43.26px;
     border-radius: 10px;
-    border: 0px solid;
-    
+    border: none;
     margin-bottom: 15px;
     margin-top: 20px;
     color: white;
     font-size: 18px;
     font-weight: bold;
 }
+
 .post-button:hover
 {
-    background : linear-gradient(135deg, #6d5efc , #c056f5);
+    background: linear-gradient(135deg, #6d5efc, #c056f5);
 }
+
 .thread-card
 {
-    background-color: #191830 ;
+    background-color: #191830;
     width: 100%;
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 20px;
-    border : 1.5px solid #262541;
+    border: 1.5px solid #262541;
     color: white;
-    cursor: pointer;
-    
 }
+
 .thread-card:hover
 {
-    outline: transparent;
     border-color: #6d5efc;
 }
+
 .thread-content
 {
     color: #9b99b8;
     padding-bottom: 15px;
-    overflow-wrap: anywhere; /*breaks very long words instead of overflowing*/
+    overflow-wrap: anywhere; /* Breaks very long words */
 }
+
+/* Keep the username level with the user image */
 .thread-user
 {
     font-size: 13px;
     font-weight: bold;
     color: #6d5efc;
-    padding-left: 5px;
-    padding-top: 15px;
+    margin: 0;
+    padding: 0 0 0 8px;
+    line-height: 30px;
     text-align: left;
 }
+
 .user-image-thread-background
 {
-    width : 30px;
+    width: 30px;
+    vertical-align: middle;
 }
+
+.user-image-thread-background img
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+/* The username cell immediately after the image cell */
+.user-image-thread-background + td
+{
+    vertical-align: middle;
+}
+
 .nav-button
 {
-    text-decoration: none;  /*removes underline*/
+    text-decoration: none;
     display: block;
     padding: 15px;
     margin-bottom: 10px;
@@ -352,9 +382,10 @@ table
     border-radius: 10px;
     color: #9b99b8;
 }
+
 .nav-button-active
 {
-    text-decoration: none; /*removes underline*/
+    text-decoration: none;
     display: block;
     padding: 15px;
     margin-bottom: 10px;
@@ -363,34 +394,33 @@ table
     background-color: #6d5efc;
     color: white;
 }
+
 .nav-button:hover
-{   
+{
     background-color: #262541;
     color: white;
 }
 
-
-.search-bar:focus-within {
-    border-color: #6d5efc;
-    
-}
-
-.search-bar {
+.search-bar
+{
     background-color: #262541;
-    border: 1px solid #464064;
-    padding: 12px;
+    margin-top : 15px;
+    padding: 10px 12px 12px;
     border: none;
     outline: none;
     border-radius: 20px;
-    width: 100%;;
+    width: 100%;
     color: white;
     font-size: 14px;
-    padding-top: 10px;
-    
 }
 
+.search-bar:focus
+{
+    outline: 1px solid #6d5efc;
+}
 
-.search-button {
+.search-button
+{
     padding: 12px;
     border: none;
     border-radius: 50px;
@@ -398,14 +428,18 @@ table
     color: white;
     font-weight: 600;
     text-align: right;
-    margin:10px;
+    margin: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.search-button:hover {
+.search-button:hover
+{
     background: linear-gradient(135deg, #6d5efc, #c056f5);
 }
 
-.search-button:active {
+.search-button:active
+{
     transform: scale(0.97);
 }
 
@@ -485,7 +519,7 @@ table
     color: #9b99b8;
     border: 1px solid #454363;
     border-radius: 8px;
-    padding: 5px 5px;
+    padding: 5px;
     margin: 5px 3px;
     font-family: "Plus Jakarta Sans", Arial, sans-serif;
     font-size: 13px;
@@ -498,34 +532,181 @@ table
     background-color: #343250;
 }
 
-.reaction-like-selected
+.reaction-button.reaction-like-selected
 {
     background-color: #34264d;
     border-color: #a78bfa;
     color: #a78bfa;
 }
 
-.reaction-unlike-selected
+.reaction-button.reaction-unlike-selected
 {
     background-color: #423027;
     border-color: #f0a070;
     color: #f0a070;
 }
 
-.reaction-love-selected
+.reaction-button.reaction-love-selected
 {
     background-color: #45243b;
     border-color: #f472b6;
     color: #f472b6;
 }
+
 .thread-reations
 {
     font-family: "Plus Jakarta Sans", Arial, sans-serif;
     color: #9b99b8;
     font-size: 12px;
-    cursor: default;
 }
+
 .link
 {
     text-decoration: none;
+    color: inherit;
+}
+.thread-page-heading
+{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thread-back-link
+{
+    display: inline-block;
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: 1px solid #454363;
+    border-radius: 8px;
+    background-color: #262541;
+}
+
+.thread-back-link:hover
+{
+    background-color: #343250;
+    border-color: #a78bfa;
+    color: white;
+}
+
+.more-menu
+{
+    position: relative;
+    float: right;
+}
+.more-button
+{
+    list-style: none;
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: #9b99b8;
+    font-size: 24px;
+    cursor: pointer;
+}
+.more-button::-webkit-details-marker
+{
+    display: none;
+}
+.more-button:hover
+{
+    background-color: #262541;
+    color: white;
+}
+.more-menu-items
+{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 150px;
+    padding: 5px;
+    background-color: #262541;
+    border: 1px solid #454363;
+    border-radius: 10px;
+    z-index: 10;
+}
+.report-popup
+{
+    width: 400px;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 25px;
+    background-color: #191830;
+    color: white;
+    border: 1px solid #454363;
+    border-radius: 15px;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+.report-popup::backdrop
+{
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.report-popup h3
+{
+    margin-top: 0;
+}
+
+.report-popup label
+{
+    color: #9b99b8;
+    font-size: 13px;
+}
+
+#reportReason
+{
+    display: block;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.report-popup-buttons
+{
+    margin-top: 15px;
+    text-align: right;
+}
+
+.report-menu-button
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: red;
+    font-family: inherit;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.report-menu-button:hover
+{
+    background-color: #45243b;
+}
+.report-submit-button
+{
+    background-color: #dc2626;
+    color: white;
+    border: 1px solid #dc2626;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 5px 3px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.report-submit-button:hover
+{
+    background-color: #b91c1c;
+    border-color: #b91c1c;
 }
