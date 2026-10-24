@@ -3,10 +3,10 @@
 session_start();
 
 //log out if someone is actually logged in
-if(isset($_SESSION["CurrentUserId"]))
+if(isset($_SESSION["currentUserId"]))
 {
-    unset($_SESSION["CurrentUserId"]);
-    unset($_SESSION["CurrentUsername"]);
+    unset($_SESSION["currentUserId"]);
+    unset($_SESSION["currentUsername"]);
     session_destroy();
 }
 

@@ -22,7 +22,8 @@ try
 }
 catch(Exception $ex)
 {
-    die("Something went wrong");
+    header("Location: error.html");
+    exit; // Stop executing the remaining PHP
 }
 
 ?>

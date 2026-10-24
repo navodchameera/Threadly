@@ -3,7 +3,9 @@ var message = document.getElementById("loginError");
 
 form.addEventListener("submit", async function(event)
 {
+    // Stop the normal form submission
     event.preventDefault();
+
     message.innerText = "";
 
     if(validateLogin())
@@ -18,11 +20,7 @@ form.addEventListener("submit", async function(event)
                 body: formData
             });
 
-            if(!response.ok)
-            {
-                message.innerText = "Something went wrong. Please try again.";
-            }
-            else
+            if(response.ok)
             {
                 var result = (await response.text()).trim();
 
@@ -36,12 +34,16 @@ form.addEventListener("submit", async function(event)
                 }
                 else if(result == "banned")
                 {
-                    message.innerText = "Your account is banned. Please contact an administrator.";
+                    message.innerText = "Your account is banned.";
                 }
                 else
                 {
                     message.innerText = "Something went wrong. Please try again.";
                 }
+            }
+            else
+            {
+                message.innerText = "Something went wrong. Please try again.";
             }
         }
         catch(error)

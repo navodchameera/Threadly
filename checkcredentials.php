@@ -1,10 +1,9 @@
 <?php
 
-
+session_start();
 
 try
 {
-    session_start();
     include "connection.php";
 
     $username = $_POST["username"];
@@ -22,44 +21,39 @@ try
 
         $userId = $row["userId"];
         $dbPassword = $row["password"];
-        $role = $row["role"];
         $status = $row["status"];
 
         if(password_verify($password, $dbPassword))
         {
             if($status == "active")
             {
-                session_regenerate_id(true);
 
-                $_SESSION["CurrentUserId"] = $userId;
-                $_SESSION["CurrrentUsername"] = $row["username"];
+                $_SESSION["currentUserId"] = $userId;
+                $_SESSION["currrentUsername"] = $row["username"];
 
-                mysqli_close($con);
-
-                header("Location: home.php");
-                exit;
+                echo "success";
             }
             else
             {
-                echo "Your account is banned. Please contact an administrator.";
+                echo "banned";
             }
         }
         else
         {
-            echo "Invalid username or password.";
+            echo "invalid_credentials";
         }
     }
     else
     {
-        echo "Invalid username or password.";
+        echo "invalid_credentials";
     }
 
+    
     mysqli_close($con);
 }
 catch(Exception $ex)
 {
-    header("Location: error.html");
-    exit; // Stop executing the remaining PHP
+    echo "error";
 }
 
 ?>

@@ -286,6 +286,7 @@ table
     padding-right: 15px;
     box-sizing: border-box;
     font-family: Plus Jakarta Sans;
+    
 }
 .post-button /*will also used as sign-up,post button*/
 {
@@ -314,6 +315,7 @@ table
     border-radius: 20px;
     border : 1.5px solid #262541;
     color: white;
+    cursor: pointer;
     
 }
 .thread-card:hover
@@ -475,4 +477,55 @@ table
 .error-login:hover
 {
     background-color: #343250;
+}
+
+.reaction-button
+{
+    background-color: #262541;
+    color: #9b99b8;
+    border: 1px solid #454363;
+    border-radius: 8px;
+    padding: 5px 5px;
+    margin: 5px 3px;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reaction-button:hover
+{
+    background-color: #343250;
+}
+
+.reaction-like-selected
+{
+    background-color: #34264d;
+    border-color: #a78bfa;
+    color: #a78bfa;
+}
+
+.reaction-unlike-selected
+{
+    background-color: #423027;
+    border-color: #f0a070;
+    color: #f0a070;
+}
+
+.reaction-love-selected
+{
+    background-color: #45243b;
+    border-color: #f472b6;
+    color: #f472b6;
+}
+.thread-reations
+{
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    color: #9b99b8;
+    font-size: 12px;
+    cursor: default;
+}
+.link
+{
+    text-decoration: none;
 }
