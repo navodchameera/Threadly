@@ -96,10 +96,11 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
                             <td><a href="home.php#input-area" class="nav-button">Create a Thread</a></td>
                         </tr>
                         <?php
+                            //only admin can see this
                             if($currentRole == "admin")
                             {
                                 echo "<tr>
-                                        <td><a href='reports.php' class='nav-button'>Reports</a></td>
+                                        <td><a href='report.php' class='nav-button'>Reports</a></td>
                                       </tr>";
                             }
                         ?>
@@ -236,6 +237,8 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
                         }
                         catch(Exception $ex)
                         {
+
+                            error_log($ex->getMessage());
                             header("Location: error.html");
                             exit; // Stop executing the remaining PHP
                         }

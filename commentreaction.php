@@ -34,7 +34,7 @@ try
 
     // Reload the thread and return to this comment
     header("Location: thread.php?threadId=".$threadId."#comment-".$commentId);
-exit;
+    exit;
         
     
 }

@@ -13,9 +13,14 @@ else
     //if thers is a user in the session save it in varibales for later use
     $currentUserId = $_SESSION["currentUserId"];
     $currentUsername = $_SESSION["currrentUsername"];
+    $currentRole = $_SESSION["currentRole"];
 
 }
 
+if(isset($_GET["threadId"]))
+{
+    $threadId = $_GET["threadId"];
+}
 
 ?>
 
@@ -23,26 +28,31 @@ else
     <head>
         <title>Thread - Threadly</title>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/styles.css?v=7">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script type="text/javascript" src="js/validatecomment.js"></script>
         <script type = "text/javascript" src = "js/reportpopup.js"></script>
+        <script type = "text/javascript" src = "js/validatereport.js"></script>
     </head>
 
     <body class="home-body">
 
         <dialog id="reportPopup" class="report-popup">
-            <form method="post" action="savereport.php">
+            <form method="post" name = "formReport" action="savereport.php" onsubmit="return validateReport()">
                 <h3>Report</h3>
 
                 <input type="hidden" name="threadId" id="reportThreadId">
                 <input type="hidden" name="commentId" id="reportCommentId">
-
-                <label for="reportReason">Why are you reporting this?</label>
-                <textarea name="reason" id="reportReason" maxlength="100" placeholder="Enter your reason..." required></textarea>
-
+                <?php
+                    //setting currentuserr id to send
+                    echo "<input type='hidden' name='userId' value='".$currentUserId."'>
+                        <input type='hidden' name='returnTo' value='".$threadId."'>";
+                ?>
+                <h5>Why are you reporting this?</h5>
+                <textarea name="reason" id="reportReason" maxlength="500" placeholder="Enter your reason..."></textarea>
+                <p id="errorReason" class="error"></p>
                 <div class="report-popup-buttons">
-                    <input type="button" class="reaction-button" onclick="closeReport()" value = "Cancel">
-                    <input type="submit" class="reaction-button report-submit-button" value = "Submit Report">
+                    <input type="button" class="report-cancel-button" onclick="closeReport()" value = "Cancel">
+                    <input type="submit" class="report-submit-button" id = "reportButton" value = "Submit Report">
                 </div>
             </form>
         </dialog>
@@ -88,6 +98,17 @@ else
                             <td><a href="home.php#input-area" class="nav-button">Create a Thread</a></td>
                         </tr>
                         <tr>
+                            <?php
+                                //only admin can see this
+                                if($currentRole == "admin")
+                                {
+                                    echo "<tr>
+                                            <td><a href='report.php' class='nav-button'>Reports</a></td>
+                                        </tr>";
+                                }
+                            ?>
+                        </tr>
+                        <tr>
                             <td><a href="home.php" class="nav-button">Settings</a></td>
                         </tr>
                         <tr>
@@ -114,9 +135,6 @@ else
                             include "data/threads.php";
                             include "data/reactions.php";
                             include "data/comment.php";
-
-
-                            $threadId = $_GET["threadId"];
 
                             $result = getThread($con, $threadId);
 
@@ -154,7 +172,7 @@ else
                                         </td>
                                         <td>
                                             <details class='more-menu'>
-                                                <summary class='more-button' aria-label='Thread options'>&#8942;</summary>
+                                                <summary class='more-button'>⋮</summary>
                                                 <div class='more-menu-items'>
                                                     <input type='button' class='report-menu-button' onclick='openReport(".$threadId.", 0)' value='Report Thread'>
                                                 </div>

@@ -6,8 +6,8 @@ try
 {
     include "connection.php";
 
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = htmlspecialchars($_POST["username"]);
+    $password = htmlspecialchars($_POST["password"]);
 
     $select = $con->prepare("SELECT * FROM user WHERE username = ?");
     $select->bind_param("s", $username);

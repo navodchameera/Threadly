@@ -8,10 +8,10 @@ $content = htmlspecialchars($_POST["content"]);
 try
 {
     session_start();
-    $currentUserId = $_SESSION["CurrentUserId"];
+    $currentUserId = $_SESSION["currentUserId"];
 
     $insert = $con->prepare("INSERT INTO thread (title, content, userId) VALUES (?,?,?)");
-    $insert->bind_param("sss",$title,$content,$currentUserId);
+    $insert->bind_param("ssi",$title,$content,$currentUserId);
     $insert->execute();
     
 

@@ -2,9 +2,9 @@
 
 include "connection.php";
 
-$username = $_POST["username"];
-$email = $_POST["email"];
-$password = password_hash($_POST["password"],PASSWORD_BCRYPT);
+$username = htmlspecialchars($_POST["username"]);
+$email = htmlspecialchars($_POST["email"]);
+$password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 $role = "user";
 $status = "active";
 

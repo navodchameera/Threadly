@@ -710,3 +710,224 @@ table
     background-color: #b91c1c;
     border-color: #b91c1c;
 }
+.report-cancel-button
+{
+    background-color: #262541;
+    color: #9b99b8;
+    border: 1px solid #454363;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 5px 3px;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.report-cancel-button:hover
+{
+    background-color: #343250;
+}
+.reports-heading
+{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reports-heading h2
+{
+    margin-bottom: 8px;
+}
+
+.reports-heading p
+{
+    color: #9b99b8;
+    font-size: 13px;
+}
+
+.report-filters
+{
+    padding-top: 10px;
+}
+
+.report-filter
+{
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px 5px 4px 0;
+    background-color: #262541;
+    border: 1px solid #454363;
+    border-radius: 8px;
+    color: #9b99b8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.report-filter:hover
+{
+    color: white;
+    border-color: #a78bfa;
+}
+
+.report-filter-active
+{
+    background-color: #6d5efc;
+    border-color: #6d5efc;
+    color: white;
+}
+
+.report-card
+{
+    cursor: default;
+}
+
+.report-type,
+.report-pending
+{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.report-type
+{
+    background-color: #34264d;
+    color: #a78bfa;
+}
+
+.report-pending
+{
+    margin-left: 5px;
+    background-color: #423027;
+    color: #f0a070;
+}
+
+.report-data
+{
+    padding-top: 10px;
+    color: #9b99b8;
+    font-size: 13px;
+}
+
+.report-data strong
+{
+    color: white;
+}
+
+.report-reason,
+.reported-comment,
+.reported-thread
+{
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.report-reason
+{
+    background-color: #302338;
+    border: 1px solid #454363;
+}
+
+.reported-comment
+{
+    background-color: #262541;
+    border-left: 3px solid #a78bfa;
+}
+
+.reported-thread
+{
+    background-color: #0f0e1a;
+    border: 1px solid #262541;
+}
+
+.report-reason h4,
+.reported-comment h4,
+.reported-thread h4
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #a78bfa;
+    font-size: 13px;
+}
+
+.report-reason p,
+.reported-comment p,
+.reported-thread p
+{
+    color: #c7c5dc;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.report-actions
+{
+    padding-top: 15px;
+}
+
+.report-actions form
+{
+    margin: 0;
+}
+
+.report-action
+{
+    padding: 8px 12px;
+    margin: 4px 5px 4px 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.report-dismiss
+{
+    background-color: #262541;
+    border-color: #454363;
+    color: #c7c5dc;
+}
+
+.report-delete
+{
+    background-color: #3b2028;
+    border-color: #f87171;
+    color: #f87171;
+}
+
+.report-ban
+{
+    background-color: #423027;
+    border-color: #f0a070;
+    color: #f0a070;
+}
+
+.report-ban-delete
+{
+    background-color: #dc2626;
+    color: white;
+}
+
+.report-action:hover
+{
+    filter: brightness(1.15);
+}
+.report-success
+{
+    padding: 12px;
+    background-color: #17352b;
+    border-radius: 8px;
+    color: #86efac;
+    font-size: 13px;
+}
+.report-empty
+{
+    padding: 25px;
+    text-align: center;
+    color: #9b99b8;
+}
