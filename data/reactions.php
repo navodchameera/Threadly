@@ -70,4 +70,20 @@ function deleteThreadReaction($con, $userId, $threadId)
     $delete->execute();
 }
 
+function getMyThreads($con, $userId)
+{
+    $select = $con->prepare("
+        SELECT thread.threadId, thread.title, thread.content, user.username
+        FROM thread
+        INNER JOIN user ON thread.userId = user.userId
+        WHERE thread.userId = ?
+        ORDER BY thread.threadId DESC
+    ");
+
+    $select->bind_param("i", $userId);
+    $select->execute();
+
+    return $select->get_result();
+}
+
 ?>

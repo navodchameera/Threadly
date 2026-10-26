@@ -32,7 +32,7 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
     <head>
         <title>Home - Threadly</title>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/styles.css?v=7">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script type="text/javascript" src="js/validatethread.js"></script>
     </head>
 
@@ -83,33 +83,31 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
             <tr>
                 <td>
                     <table id="left-nav-bar">
+
                         <tr>
-                            <td height="200px"></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button-active">Home</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">My Threads</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="dashboard.php" class="nav-button">Dashboard</a></td>
-                        </tr>
-                        <?php
-                            //only admin can see this
-                            if($currentRole == "admin")
-                            {
-                                echo "<tr>
-                                        <td><a href='report.php' class='nav-button'>Reports</a></td>
-                                      </tr>";
-                            }
-                        ?>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">Settings</a></td>
+                            <td height = "190"></td>
                         </tr>
                         
                         <tr>
-                            <td height="100px"></td>
+                            <td>
+                                <a href="home.php" class="nav-button-active">Home</a>
+                                <a href="mythread.php" class="nav-button">My threads</a>
+                                <?php
+                                    //only admin can see this
+                                    if($currentRole == "admin")
+                                    {
+                                        echo "<a href='report.php' class='nav-button'>Dashbord</a></td>";
+                                    }
+                                ?>
+                            </td>
+
+                        </tr>
+                        
+
+                        
+                        
+                        <tr>
+                            <td height="185px"></td>
                         </tr>
                     </table>
                 </td>

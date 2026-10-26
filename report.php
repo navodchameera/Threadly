@@ -127,135 +127,120 @@ try
                 <td>
                     <table id="left-nav-bar">
                         <tr>
-                            <td height="200px"></td>
+                            <td>
+                                <a href="home.php" class="nav-button">Home</a>
+                                <a href="mythread.php" class="nav-button">My Threads</a>
+                                <a href="report.php" class="nav-button-active">Dashboard</a>
+
+                            </td>
                         </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">Home</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">My Threads</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php#input-area" class="nav-button">Create a Thread</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="reports.php" class="nav-button-active">Reports</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">Settings</a></td>
-                        </tr>
-                        <tr>
-                            <td height="100px"></td>
-                        </tr>
+                        
                     </table>
                 </td>
 
                 
 
                 <td colspan="4">
-                    
-                    <table class="admin-statistics">
-                        <tr>
-                            <td class="admin-statistics-cell">
-                                <table class="admin-stat-card">
-                                    <tr>
-                                        <td class="admin-stat-label">Registered Users</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="admin-stat-number">
-                                            <?php 
-                                                $statisticsResult = getAdminStatistics($con);
-                                                $statisticsRow = $statisticsResult->fetch_assoc();
-                                                echo $statisticsRow["userCount"]; 
-                                            ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-
-                            <td class="admin-statistics-cell">
-                                <table class="admin-stat-card">
-                                    <tr>
-                                        <td class="admin-stat-label">Active Threads</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="admin-stat-number">
-                                            <?php 
-                                                echo $statisticsRow["threadCount"]; 
-                                                ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="admin-statistics-cell">
-                                <table class="admin-stat-card">
-                                    <tr>
-                                        <td class="admin-stat-label">Pending Reports</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="admin-stat-number">
-                                            <?php 
-                                                echo $statisticsRow["pendingCount"]; 
-                                            ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-
-                            <td class="admin-statistics-cell">
-                                <table class="admin-stat-card">
-                                    <tr>
-                                        <td class="admin-stat-label">Banned Users</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="admin-stat-number">
-                                            <?php
-                                                echo $statisticsRow["bannedCount"]; 
-                                            ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="admin-statistics-cell">
-                                <table class="admin-stat-card">
-                                    <tr>
-                                        <td class="admin-stat-label">Resolved Reports</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="admin-stat-number">
-                                            <?php 
-                                                echo $statisticsRow["resolvedCount"]; 
-                                            ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-
-                            <td class="admin-statistics-cell">
-                                <table class="admin-stat-card">
-                                    <tr>
-                                        <td class="admin-stat-label">Dismissed Reports</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="admin-stat-number">
-                                            <?php 
-                                                echo $statisticsRow["dismissedCount"]; 
-                                            ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-
-
                     <div id="content-area">
+                        
+                        <table class="admin-statistics">
+                            <tr>
+                                <td class="admin-statistics-cell">
+                                    <table class="admin-stat-card">
+                                        <tr>
+                                            <td class="admin-stat-label">Registered Users</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="admin-stat-number">
+                                                <?php 
+                                                    $statisticsResult = getAdminStatistics($con);
+                                                    $statisticsRow = $statisticsResult->fetch_assoc();
+                                                    echo $statisticsRow["userCount"]; 
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td class="admin-statistics-cell">
+                                    <table class="admin-stat-card">
+                                        <tr>
+                                            <td class="admin-stat-label">Active Threads</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="admin-stat-number">
+                                                <?php 
+                                                    echo $statisticsRow["threadCount"]; 
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td class="admin-statistics-cell">
+                                    <table class="admin-stat-card">
+                                        <tr>
+                                            <td class="admin-stat-label">Pending Reports</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="admin-stat-number">
+                                                <?php 
+                                                echo $statisticsRow["pendingCount"]; 
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="admin-statistics-cell">
+                                    <table class="admin-stat-card">
+                                        <tr>
+                                            <td class="admin-stat-label">Banned Users</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="admin-stat-number">
+                                                <?php 
+                                                    echo $statisticsRow["bannedCount"]; 
+                                                    ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td class="admin-statistics-cell">
+                                    <table class="admin-stat-card">
+                                        <tr>
+                                            <td class="admin-stat-label">Resolved Reports</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="admin-stat-number">
+                                                <?php 
+                                                    echo $statisticsRow["resolvedCount"]; 
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td class="admin-statistics-cell">
+                                    <table class="admin-stat-card">
+                                        <tr>
+                                            <td class="admin-stat-label">Dismissed Reports</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="admin-stat-number">
+                                                <?php 
+                                                    echo $statisticsRow["dismissedCount"]; 
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
                         <table class="reports-heading">
                             <tr>
                                 <td>

@@ -86,34 +86,20 @@ if(isset($_GET["threadId"]))
                 <td>
                     <table id="left-nav-bar">
                         <tr>
-                            <td height="200px"></td>
+                            <td>
+                                <a href="home.php" class="nav-button-active">Home</a>
+                                <a href="mythread.php" class="nav-button">My Threads</a>
+                                <?php
+                                    //only admin can see this
+                                    if($currentRole == "admin")
+                                    {
+                                        echo "<a href='report.php' class='nav-button'>Dashbord</a>";
+                                    }
+                                ?>
+                            </td>
                         </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button-active">Home</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">My Threads</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php#input-area" class="nav-button">Create a Thread</a></td>
-                        </tr>
-                        <tr>
-                            <?php
-                                //only admin can see this
-                                if($currentRole == "admin")
-                                {
-                                    echo "<tr>
-                                            <td><a href='report.php' class='nav-button'>Reports</a></td>
-                                        </tr>";
-                                }
-                            ?>
-                        </tr>
-                        <tr>
-                            <td><a href="home.php" class="nav-button">Settings</a></td>
-                        </tr>
-                        <tr>
-                            <td height="100px"></td>
-                        </tr>
+                        
+                        
                     </table>
                 </td>
 
