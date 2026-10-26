@@ -96,6 +96,8 @@ try
             </form>
         </dialog>
 
+
+
         <table id="layout" cellpadding="0">
             <tr id="top-nav-bar">
                 <td class="threadly-title">Threadly</td>
@@ -148,7 +150,111 @@ try
                     </table>
                 </td>
 
+                
+
                 <td colspan="4">
+                    
+                    <table class="admin-statistics">
+                        <tr>
+                            <td class="admin-statistics-cell">
+                                <table class="admin-stat-card">
+                                    <tr>
+                                        <td class="admin-stat-label">Registered Users</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="admin-stat-number">
+                                            <?php 
+                                                $statisticsResult = getAdminStatistics($con);
+                                                $statisticsRow = $statisticsResult->fetch_assoc();
+                                                echo $statisticsRow["userCount"]; 
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td class="admin-statistics-cell">
+                                <table class="admin-stat-card">
+                                    <tr>
+                                        <td class="admin-stat-label">Active Threads</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="admin-stat-number">
+                                            <?php 
+                                                echo $statisticsRow["threadCount"]; 
+                                                ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="admin-statistics-cell">
+                                <table class="admin-stat-card">
+                                    <tr>
+                                        <td class="admin-stat-label">Pending Reports</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="admin-stat-number">
+                                            <?php 
+                                                echo $statisticsRow["pendingCount"]; 
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td class="admin-statistics-cell">
+                                <table class="admin-stat-card">
+                                    <tr>
+                                        <td class="admin-stat-label">Banned Users</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="admin-stat-number">
+                                            <?php
+                                                echo $statisticsRow["bannedCount"]; 
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="admin-statistics-cell">
+                                <table class="admin-stat-card">
+                                    <tr>
+                                        <td class="admin-stat-label">Resolved Reports</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="admin-stat-number">
+                                            <?php 
+                                                echo $statisticsRow["resolvedCount"]; 
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td class="admin-statistics-cell">
+                                <table class="admin-stat-card">
+                                    <tr>
+                                        <td class="admin-stat-label">Dismissed Reports</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="admin-stat-number">
+                                            <?php 
+                                                echo $statisticsRow["dismissedCount"]; 
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+
                     <div id="content-area">
                         <table class="reports-heading">
                             <tr>
@@ -162,17 +268,19 @@ try
                                 <td class="report-filters">
                                     <?php
 
-                                    echo "<a href='reports.php?sort=new&type=".$type."' class='report-filter ".$newClass."'>New</a>
-                                          <a href='reports.php?sort=most&type=".$type."' class='report-filter ".$mostClass."'>Most</a>
+                                    echo "<a href='report.php?sort=new&type=".$type."' class='report-filter ".$newClass."'>New</a>
+                                          <a href='report.php?sort=most&type=".$type."' class='report-filter ".$mostClass."'>Most</a>
 
-                                          <a href='reports.php?sort=".$sort."&type=all' class='report-filter ".$allClass."'>All</a>
-                                          <a href='reports.php?sort=".$sort."&type=threads' class='report-filter ".$threadsClass."'>Threads</a>
-                                          <a href='reports.php?sort=".$sort."&type=comments' class='report-filter ".$commentsClass."'>Comments</a>";
+                                          <a href='report.php?sort=".$sort."&type=all' class='report-filter ".$allClass."'>All</a>
+                                          <a href='report.php?sort=".$sort."&type=threads' class='report-filter ".$threadsClass."'>Threads</a>
+                                          <a href='report.php?sort=".$sort."&type=comments' class='report-filter ".$commentsClass."'>Comments</a>";
 
                                     ?>
                                 </td>
                             </tr>
                         </table>
+
+                        
 
                         <?php
 

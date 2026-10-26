@@ -931,3 +931,58 @@ table
     text-align: center;
     color: #9b99b8;
 }
+.admin-statistics
+{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.admin-statistics-cell
+{
+    width: 50%;
+    vertical-align: top;
+}
+
+.admin-statistics-cell:first-child
+{
+    padding-right: 10px;
+}
+
+.admin-statistics-cell:last-child
+{
+    padding-left: 10px;
+}
+
+.admin-stat-card
+{
+    width: 100%;
+    padding: 25px;
+    background-color: #191830;
+    border: 1.5px solid #262541;
+    border-top: 3px solid #6d5efc;
+    border-radius: 20px;
+}
+
+.admin-stat-label
+{
+    color: #c7c5dc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.admin-stat-number
+{
+    color: #a78bfa;
+    font-size: 42px;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.admin-stat-description
+{
+    color: #9b99b8;
+    font-size: 12px;
+    line-height: 1.6;
+}

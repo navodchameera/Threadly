@@ -109,4 +109,22 @@ function deleteReportedComment($con, $commentId)
     $delete->execute();
 }
 
+
+function getAdminStatistics($con)
+{
+    $select = $con->prepare("
+        SELECT
+        (SELECT COUNT(*) FROM user) AS userCount,
+        (SELECT COUNT(*) FROM thread) AS threadCount,
+        (SELECT COUNT(*) FROM report WHERE status = 'pending') AS pendingCount,
+        (SELECT COUNT(*) FROM user WHERE status = 'banned') AS bannedCount,
+        (SELECT COUNT(*) FROM report WHERE status = 'resolved') AS resolvedCount,
+        (SELECT COUNT(*) FROM report WHERE status = 'dismissed') AS dismissedCount
+    ");
+
+    $select->execute();
+
+    return $select->get_result();
+}
+
 ?>

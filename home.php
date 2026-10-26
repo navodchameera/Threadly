@@ -93,7 +93,7 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
                             <td><a href="home.php" class="nav-button">My Threads</a></td>
                         </tr>
                         <tr>
-                            <td><a href="home.php#input-area" class="nav-button">Create a Thread</a></td>
+                            <td><a href="dashboard.php" class="nav-button">Dashboard</a></td>
                         </tr>
                         <?php
                             //only admin can see this

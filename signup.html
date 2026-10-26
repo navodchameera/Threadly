@@ -4,7 +4,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel = "stylesheet" type = "text/css" href = "css/styles.css">
         <script type = "text/javascript" src = "js/registererrors.js" defer></script>
-        <script type = "text/javascript" src = "js/validatesignup.js" defer></script>
+        <script type = "text/javascript" src = "js/validatesignup.js"></script>
+        <script type = "text/javascript" src = "js/togglepassword.js"></script>
     </head>
     <body>
         <form name = "formSignUp" action = "register.php" method = "post">
@@ -51,7 +52,12 @@
                                 <td class = "input-names">Password</td>
                             </tr>
                             <tr>
-                                <td class = "input-cells"><input type = "text" placeholder = "password" name = "password" class = "textbox"></td>
+                                <td class = "input-cells">
+                                    <div class="password-container">
+                                        <input type = "password" placeholder = "password" name = "password" id="password" class = "textbox">
+                                    </div>
+                                    
+                                </td>
                             </tr>
                              <tr>
                                 <td><p id = "errorPassword" class = "error"></p></td>
@@ -60,7 +66,11 @@
                                 <td class = "input-names">Confirm Password</td>
                             </tr>
                             <tr>
-                                <td class = "input-cells"><input type = "text" placeholder = "confirm password" name = "confirmPassword" class = "textbox"></td>
+                                <td class = "input-cells">
+                                    <div class="password-container">
+                                        <input type = "password" placeholder = "confirm password" name = "confirmPassword" class = "textbox">
+                                    </div>
+                                </td>
                             </tr>
                              <tr>
                                 <td><p id = "errorConfirmPassword" class = "error"></p></td>
