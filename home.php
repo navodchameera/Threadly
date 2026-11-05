@@ -84,9 +84,7 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
                 <td>
                     <table id="left-nav-bar">
 
-                        <tr>
-                            <td height = "190"></td>
-                        </tr>
+                        
                         
                         <tr>
                             <td>
@@ -96,9 +94,10 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
                                     //only admin can see this
                                     if($currentRole == "admin")
                                     {
-                                        echo "<a href='report.php' class='nav-button'>Dashbord</a></td>";
+                                        echo "<a href='report.php' class='nav-button'>Dashbord</a>";
                                     }
                                 ?>
+                                
                             </td>
 
                         </tr>
@@ -106,9 +105,7 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
 
                         
                         
-                        <tr>
-                            <td height="185px"></td>
-                        </tr>
+                       
                     </table>
                 </td>
 

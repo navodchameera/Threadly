@@ -95,6 +95,7 @@ if(isset($_GET["search"]) && is_string($_GET["search"]))
                                         echo "<a href='report.php' class='nav-button'>Dashbord</a>";
                                     }
                                 ?>
+                                
                             </td>
                         </tr>
                         

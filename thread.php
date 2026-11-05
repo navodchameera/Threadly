@@ -96,6 +96,7 @@ if(isset($_GET["threadId"]))
                                         echo "<a href='report.php' class='nav-button'>Dashbord</a>";
                                     }
                                 ?>
+                                
                             </td>
                         </tr>
                         

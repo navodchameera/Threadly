@@ -131,7 +131,7 @@ try
                                 <a href="home.php" class="nav-button">Home</a>
                                 <a href="mythread.php" class="nav-button">My Threads</a>
                                 <a href="report.php" class="nav-button-active">Dashboard</a>
-
+                                
                             </td>
                         </tr>
                         
@@ -389,7 +389,6 @@ try
 catch(Throwable $ex)
 {
 
-    die(htmlspecialchars($ex->getMessage()));
 
     header("Location: error.html");
     exit;

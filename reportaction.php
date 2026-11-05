@@ -31,7 +31,7 @@ try
     // If the report does not exist, load the error page
     if($result->num_rows == 0)
     {
-        header("Location: error.php");
+        header("Location: error.html");
         exit;
     }
     else
@@ -97,7 +97,7 @@ try
         }
         else
         {
-            header("Location: error.php");
+            header("Location: error.html");
             exit;
         }
     }
@@ -111,8 +111,8 @@ try
 }
 catch(Throwable $ex)
 {
-    // Temporarily show the actual error while testing locally
-    die(htmlspecialchars($ex->getMessage()));
+    header("Location: error.html");
+    exit;
 }
 
 ?>
